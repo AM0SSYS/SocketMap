@@ -1,0 +1,40 @@
+[package]
+name = "sockets_map_gui"
+description = "A tool to represent, graphically, the network interactions between processes across different computers within the same LAN. GUI version with server."
+authors = ["LazyTanuki"]
+version = "1.0.0"
+edition = "2021"
+license = "MIT"
+
+[[bin]]
+name = "sockets_map_gui"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1.0.68"
+gtk = { package = "gtk4", version = "0.6.2" }
+relm4 = { version = "0.6.0-alpha.1", features = ["libadwaita"]}
+relm4-components = "0.6.0-alpha.1"
+tokio = { version = "1.25.0", features = ["full"] }
+tracker = "0.2.0"
+log = "0.4.17"
+simplelog = "0.12.0"
+libadwaita = { version = "0.3.1" }
+tempfile = "3.3.0"
+bincode = "1.3.3"
+tsyncp = "0.3.0"
+gtk4_commonmark = { git = "https://github.com/lazytanuki/gtk4_commonmark.git", version = "0.1.2" }
+tokio-util = "0.7.7"
+humantime = "2.1.0"
+open = "3.2.0"
+
+[dependencies.sockets_map]
+path = "../sockets_map"
+
+[package.metadata.deb]
+depends = "libadwaita-1-0, graphviz"
+assets = [
+  ["target/release/sockets_map_gui", "/usr/bin/sockets-map-gui", "755"],
+  ["res/icon.svg", "/usr/share/icons/hicolor/scalable/apps/sockets_map.svg", "644"],
+  ["res/sockets_map.desktop", "/usr/share/applications/sockets_map.desktop", "644"]
+]

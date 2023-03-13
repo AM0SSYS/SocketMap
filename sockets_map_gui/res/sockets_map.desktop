@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Sockets Map
+Exec=/usr/bin/sockets-map-gui
+Terminal=false
+Type=Application
+Icon=sockets_map
+StartupWMClass=Sockets Map
+Comment=A tool to represent, graphically, the network interactions between processes across different computers within the same LAN
+Categories=Network;Utilities;

@@ -1,0 +1,2 @@
+[workspace]
+members = ["sockets_map", "sockets_map_cli", "sockets_map_agent", "sockets_map_gui"]
