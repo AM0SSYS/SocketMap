@@ -2,13 +2,15 @@
 
 A tool to represent, graphically, the network interactions between processes across different computers within the same LAN.
 
-![](examples/test.png)
-
 It is useful to quickly analyze software network architectures for security research.
 
 The main difference between this tool and other network mapping tools is the focus on interactions between processes, instead of interactions between sockets only.
 
-> Warning: this is not a Wireshark with graphs. The goal of this tool is to represent connections between sockets on machines you control/scan. If a process has an established connection to example.com, it will not show in the graph unless you supply, for instance, a CSV file that describes the processes on the example.com server, along with and their active sockets.
+> **Warning**: this is not a Wireshark with graphs. The goal of this tool is to represent connections between sockets on machines you control/scan. If a process has an established connection to example.com, it will not show in the graph unless you supply, for instance, a CSV file that describes the processes on the example.com server, along with and their active sockets.
+
+<div align="center">
+<video src="https://user-images.githubusercontent.com/43273245/225655274-b2c5cb14-64db-42a2-a904-d6931aba0caf.mp4">
+</div>
 
 # Installation and requirements
 
